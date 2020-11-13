@@ -1,0 +1,57 @@
+n = int(input())
+input_data = input()
+summary=0
+
+for x in input_data:
+  summary += int(x)
+
+print(summary)
+
+####
+
+test_case = int(input())
+
+for tc in range(test_case):
+  input_data = input().split()
+  r = int(input_data[0])
+  data = input_data[1]
+
+  result = []
+  for x in data:
+    for i in range(r):
+      result.append(x)
+
+  print("".join(result)) # 공백없이 붙여서 출력
+  
+####
+  
+from collections import Counter
+
+input_data = input().lower()
+counter = Counter(input_data)
+
+if len (counter)>=2:
+  a, b = counter.most_common(2) # 제일 빈도가 많은 것 두개
+  if a[1] == b[1]:
+    print("?")
+  else:
+    print(a[0].upper())
+
+else:
+  a = counter.most_common(1)
+  print(a[0][0].upper())
+  
+####
+
+a, b = input().split()
+# 뒤집기
+a = int(a[::-1])
+b = int(b[::-1])
+
+print(max(a, b))
+
+####
+
+
+  
+  
