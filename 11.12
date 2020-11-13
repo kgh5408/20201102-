@@ -11,5 +11,86 @@ print(" )  ( ')")
 print("(  /  )")
 print(" \(__)|")
 
-########
+####
+
+'''
+출력 대상
+|\_/|
+|q p|   /}
+( 0 )"""\
+|"^"`    |
+||_/=\\__|
+'''
+
+print("|\\_/|") 
+print("|q p|   /}")
+print('( 0 )"""\\')
+print('|"^"`    |')
+print("||_/=\\\\__|")
+
+####
+
+hour, minute = map(int, input().split())
+
+minute -= 45
+
+if minute < 0:
+  hour -=1
+  minute +=60
+  if hour < 0:
+    hour += 24
+
+print(hour, minute)
+
+####
+
+test_case = int(input())
+
+for tc in range(test_case):
+  a, b = map(int,input().split())
+  print(a + b)
+  
+####
+
+n = int(input())
+
+for i in range(n, 0, -1):
+  print(i)
+
+####
+
+test_case = int(input())
+
+for tc in range(test_case):
+  a, b = map(int,input().split())
+  print(f"Case #{tc+1}: {a+b}")
+  
+####
+
+n = 10
+set_data = set()
+
+for i in range(n):
+  x = int(input())
+  set_data.add(x%42) # 중복허용안함
+
+print(len(set_data))
+
+####
+
+n = int(input())
+
+for i in range(n):
+  data = input()
+  score = 0
+  cnt = 0
+  for j in data:
+    if j == 'O':
+      cnt += 1
+      score += cnt
+    else:
+        cnt = 0
+  print(score)
+  
+####
 
